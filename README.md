@@ -116,4 +116,4 @@ After a developer key has been created for the LTI plugin, the plugin can be add
 
 ---
 
-Special thanks to @Cvmcosta (Inventor of ltijs) which helped me a lot with integreating ltijs with grades to canvas.
+Special thanks to [@Cvmcosta](https://github.com/Cvmcosta) (Inventor of ltijs) which helped me a lot with integreating ltijs with grades to canvas.

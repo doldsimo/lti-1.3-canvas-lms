@@ -11,7 +11,8 @@ This is important to mention, since there are differences in configuration files
 
 - [Technologies](#Technologies)
 - [Setting up Canvas LMS](#SettingUpCanvas)
-- [Install LTI 1.3 Plugin inside Canvas](#installation)
+- [Create Developer key for external LTI app](#installation)
+- [Install LTI App inside Canvas](#installation)
 - [Register Canvas LMS inside Plugin](#deployment)
 - [How to use example plugin](#aufbau)
 - [Example Application inside Canvas](#aufbau)
@@ -45,6 +46,8 @@ If LTI plugins are to be used in the set-up instance, [Production-Start](https:/
 However, the quick start guide provided by the Canvas LMS should not be used, as problems with LTI 1.3 can occur there.
 To test this plugin, a separate instance was hosted on an Ubuntu 20.04 server, which was set up with the help of the Production Start Guide.
 
+| :point_up:    | Important |
+|---------------|:------------------------|
 > For a Canvas instance on an Ubuntu server, at least 8 GB of Canvas RAM is recommended. So use a server that has at least 8 GB of RAM.
 
 ## Important LTI configuration for own Canvas instances
@@ -75,6 +78,42 @@ Another explenation could be found in [this post](https://community.canvaslms.co
 
 ---
 
+## Create Developer key for external LTI app
 
+If a new LTI 1.3 plugin is integrated into Canvas, a new developer key must first be created. This is needed for the external app to interact with canvas.
+
+So a new "LTI Developer Key" has to be created under the *admin panel* of Canvas. See the screenshots below.
+
+- Admin -> SiteAdmin -> Developer keys
+
+So initially only admins can create developer keys and therefore only admins can integrate a new external LTI app.
+However, once a developer key has been created, this plugin can be used in various places, not only by admins but also, for example, by course creators.
+
+![Developer keys](./doc/img/developer_key.png 'Developer keys')
+
+When creating a new developer key, a new window opens. The external tool must be configured in the window. Important data is queried there via the external LTI tool. Here it is important that the URLS are correct so that the communication between Canvas and the LTI Plugin can work.
+
+Here is an example of a completed LTI developer key configuration:
+
+![Developer keys](./doc/img/developer_key_example_setup.png 'Developer keys')
+
+| :exclamation:  Important   |
+|-----------------------------------------|
+
+> Canvas only allows embedding LTI 1.3 plugins which are loaded over HTTPS. This can sometimes be difficult for development purposes, since you don't want to redeploy the plugin on a server with every change. That's why I recommend a tunnel like [Nkrog](https://ngrok.com/) for development purposes, which makes your own local host accessible from the outside via an https url.
+
+
+> It is important that if the LTI plugin is to have certain functions, such as sending notes to canvas, this feature must be activated in the configuration under "LTI Advantage Services". If these functions are not activated here, the external tool does not have these permissions and, for example, no notes can be sent to Canvas.
+
+
+
+After the key has been created, it must be set to the "on" status so that the key works correctly. 
+
+After a developer key has been created for the LTI plugin, the plugin can be added to Canvas as an external app, how this works is described in the next section
+
+
+
+
+---
 
 Special thanks to @Cvmcosta (Inventor of ltijs) which helped me a lot with integreating ltijs with grades to canvas.

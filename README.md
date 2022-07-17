@@ -9,18 +9,18 @@ This is important to mention, since there are differences in configuration files
 
 ## Table of Contents
 
-- [Technologies](#Technologies)
-- [Setting up Canvas LMS](#SettingUpCanvas)
-- [Create Developer key for external LTI app](#installation)
-- [Install LTI App inside Canvas](#installation)
-- [Register Canvas LMS inside Plugin](#deployment)
-- [How to use example plugin](#aufbau)
-- [Example Application inside Canvas](#aufbau)
+- [1. Technologies](#1.-Technologies)
+- [2. Setting up Canvas LMS](#2.-Setting-Up-Canvas)
+- [3. Create developer key for external LTI app](#3.-Create-developer-key-for-external-LTI-app)
+- [4. Install LTI App inside Canvas](#installation)
+- [5. Register Canvas LMS inside Plugin](#deployment)
+- [6. How to use example plugin](#aufbau)
+- [7. Example Application inside Canvas](#aufbau)
 <!-- - [Debuggen](#debuggen) -->
 
 ---
 
-## Technologies
+## 1. Technologies
 
 The developed example LTI 1.3 Plugin is an independent full stack web application.
 The following technologies were used:
@@ -39,7 +39,7 @@ The example application in this repository builds on top of ltijs and creates a 
 
 ---
 
-## Setting Up Canvas
+## 2. Setting Up Canvas
 
 There are several ways to set up a Canvas instance.
 If LTI plugins are to be used in the set-up instance, [Production-Start](https://github.com/instructure/canvas-lms/wiki/Production-Start) from Canvas is recommended. Another way is that the Canvas instance is directly hosted by [Instructure](https://www.instructure.com/).
@@ -78,7 +78,7 @@ Another explenation could be found in [this post](https://community.canvaslms.co
 
 ---
 
-## Create Developer key for external LTI app
+## 3. Create developer key for external LTI app
 
 If a new LTI 1.3 plugin is integrated into Canvas, a new developer key must first be created. This is needed for the external app to interact with canvas.
 

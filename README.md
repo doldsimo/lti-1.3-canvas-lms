@@ -48,6 +48,7 @@ To test this plugin, a separate instance was hosted on an Ubuntu 20.04 server, w
 
 | :point_up: Important |
 |-------------------------------------|
+> **Warning**
 > For a Canvas instance on an Ubuntu server, at least 8 GB of Canvas RAM is recommended. So use a server that has at least 8 GB of RAM.
 
 ### Important LTI configuration for own Canvas instances

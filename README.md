@@ -9,9 +9,9 @@ This is important to mention, since there are differences in configuration files
 
 ## Table of Contents
 
-- [1. Technologies](#1.-Technologies)
-- [2. Setting up Canvas LMS](#2.-Setting-Up-Canvas)
-- [3. Create developer key for external LTI app](#3.-Create-developer-key-for-external-LTI-app)
+- [1. Technologies](#1.-technologies)
+- [2. Setting up Canvas LMS](#2.-setting-up-canvas)
+- [3. Create developer key for external LTI app](#3.-create-developer-key-for-external-lti-app)
 - [4. Install LTI App inside Canvas](#installation)
 - [5. Register Canvas LMS inside Plugin](#deployment)
 - [6. How to use example plugin](#aufbau)

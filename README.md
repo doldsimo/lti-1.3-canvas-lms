@@ -46,8 +46,8 @@ If LTI plugins are to be used in the set-up instance, [Production-Start](https:/
 However, the quick start guide provided by the Canvas LMS should not be used, as problems with LTI 1.3 can occur there.
 To test this plugin, a separate instance was hosted on an Ubuntu 20.04 server, which was set up with the help of the Production Start Guide.
 
-| :point_up:    | Important |
-|---------------|:------------------------|
+| :point_up: Important |
+|-------------------------------------|
 > For a Canvas instance on an Ubuntu server, at least 8 GB of Canvas RAM is recommended. So use a server that has at least 8 GB of RAM.
 
 ### Important LTI configuration for own Canvas instances

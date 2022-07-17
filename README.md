@@ -12,11 +12,9 @@ This is important to mention, since there are differences in configuration files
 - [1. Technologies](#1-technologies)
 - [2. Setting up Canvas LMS](#2-setting-up-canvas)
 - [3. Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app)
-- [4. Install LTI App inside Canvas](#installation)
-- [5. Register Canvas LMS inside Plugin](#deployment)
+- [4. Install LTI app inside Canvas](#4-install-lti-app-inside-canvas)
+- [5. Use LTI plugin inside Canvas](#5-use-lti-plugin-inside-canvas)
 - [6. How to use example plugin](#aufbau)
-- [7. Example Application inside Canvas](#aufbau)
-<!-- - [Debuggen](#debuggen) -->
 
 ---
 
@@ -89,13 +87,13 @@ So a new "LTI Developer Key" has to be created under the *admin panel* of Canvas
 So initially only admins can create developer keys and therefore only admins can integrate a new external LTI app.
 However, once a developer key has been created, this plugin can be used in various places, not only by admins but also, for example, by course creators.
 
-![Developer keys](./doc/img/developer_key.png 'Developer keys')
+![Developer keys](./zdoc/img/developer_key.png 'Developer keys')
 
 When creating a new developer key, a new window opens. The external tool must be configured in the window. Important data is queried there via the external LTI tool. Here it is important that the URLS are correct so that the communication between Canvas and the LTI Plugin can work.
 
 Here is an example of a completed LTI developer key configuration:
 
-![Developer keys](./doc/img/developer_key_example_setup.png 'Developer keys')
+![Developer keys](./zdoc/img/developer_key_example_setup.png 'Developer keys')
 
 | :exclamation:  Important   |
 |-----------------------------------------|
@@ -112,7 +110,41 @@ After the key has been created, it must be set to the "on" status so that the ke
 After a developer key has been created for the LTI plugin, the plugin can be added to Canvas as an external app, how this works is described in the next section
 
 
+---
 
+## 4. Install LTI app inside Canvas
+
+The following shows how an LTI app is installed in Canvas. It is important that the third step (Create developer key for external LTI app) has been carried out beforehand.
+
+> Canvas allows LTI plugins to be integrated globally (for all courses) or only for individual courses.
+This can be done either via the admin options of the admin account, or via the settings of the respective course. However, the procedure for embedding is the same.
+
+
+Global (for all courses):
+
+- Admin -> SiteAdmin -> Settings -> Apps
+
+Local (nly for one course):
+
+- Example Course -> Settings -> Apps
+
+In both options you get to the fact that you can add an app. See the screenshot below.
+
+![Add LTI app](./zdoc/img/add_lti_app.png 'Add LTI app')
+
+Click on +App and a new window opens in which you can integrate the external app.
+
+![Add LTI app cientid](./zdoc/img/add_lti_app_clientid.png 'Add LTI app cientid')
+
+Select that you add the new app via the Client ID.
+This ID is found by the creation from the LTI Developer key. In this example the ID is: “10000000000001” (Look at previous screenshot).
+Then click further and install the plugin.
+
+After the installation has worked, the plugin can be used within Canvas. Depending on whether it was integrated globally or locally, it can be used in every course or only in a specific one.
+
+---
+
+## 5. Use LTI plugin inside Canvas
 
 ---
 

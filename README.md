@@ -1,4 +1,4 @@
-# LTI 1.3 Plugin Canvas Integration Example
+# LTI 1.3 plugin Canvas integration example
 
 > Repository describes and provides an example plugin on how a Learning Management System (LMS) can be extended with your own plugins using LTI 1.3 Advanced. In this example Canvas LMS is used.
 
@@ -20,7 +20,7 @@ This is important to mention, since there are differences in configuration files
 
 ## 1. Technologies
 
-The developed example LTI 1.3 Plugin is an independent full stack web application.
+The developed LTI 1.3 plugin example is an independent full stack web application.
 The following technologies were used:
 - ReactJs (Frontend)
 - Nodejs (Backend); with [ltijs](https://github.com/Cvmcosta/ltijs) as library for LTI 1.3 integration
@@ -33,7 +33,13 @@ The development of the LTI app is splitted in a client and a server folder.
 
 > server -> Backend
 
-The example application in this repository builds on top of ltijs and creates a small quiz that sends the grades back to Canvas and stores them there.
+The example application in this repository builds on top of [ltijs](https://github.com/Cvmcosta/ltijs) and creates a small quiz that sends the grades back to Canvas and stores them there.
+
+
+If you are experienced with LTI and just want to try out the LTI plugin quickly, you can skip to step 6 [How to use and set up the example LTI app](#6-how-to-use-and-set-up-the-example-lti-app).
+
+However, I recommend reading through all points thoroughly, as there are several difficulties with integrating LTI with canvas.
+
 
 ---
 
@@ -174,7 +180,75 @@ If you try to use the graded LTI plugin as a course administrator in the *Studen
 
 ## 6. How to use and set up the example LTI app
 
+> Nodejs must be installed on your system
 
+First clone the repository for example with `git clone` or download the zip.
+
+> To get the LTI plugin to work only the backend (server folder) is the importaint one. If you want to make changes than you also have to edit the frontend (client folder).
+
+#### For Frontend develompment:
+
+Navigate into the client folder with 
+
+`cd client` and make `npm install` inside that folder. 
+
+After that start the development server for the frontend with `npm start`.
+
+If you want to make a new build from the frontend run `npm build`.
+
+> Note that the new build must be copied and placed inside the `server/public` folder. This is the only location where the LTI frontend is stored. So the client folder is only for development.
+
+
+#### Backend (Real LTI Plugin):
+
+> MongoDB must be installed beaucse there will the configs and keys from the plafrom stored
+
+Navigate into the server folder with
+
+`cd server` and make `npm install` inside that folder.
+
+Set up the `.env` file (copy example.env and remane the file)
+
+```
+DB_HOST=localhost 
+DB_NAME=ltidb
+DB_USER=user
+DB_PASS=pass
+LTI_KEY=LTIKEY
+```
+
+Register the used plattform correct inside the `index.js` file. (Canvas Exmaple)
+
+> If you want to use this LTI plugin example in another LMS like moodle it will work but you have to register the plugin with other configurations.
+
+```
+  /**
+   * Register platform
+   */
+  await lti.registerPlatform({
+    url: 'https://canvas.instructure.com',
+    name: 'exampledomain',
+    clientId: '10000000000001',
+    authenticationEndpoint: 'https://canvas.exampledomain.com/api/lti/authorize_redirect',
+    accesstokenEndpoint: 'https://canvas.exampledomain.com/login/oauth2/token',
+    authConfig: { method: 'JWK_SET', key: 'https://canvas.exampledomain.com/api/lti/security/jwks' }
+  })
+```
+- `url` where is the canvas instance hosted
+- `name` domainname from hosted instance
+- `clientId` id from canvas for lti plugin (check step 3 [Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app))
+- `authenticationEndpoint` Endpoint for lit
+- `accesstokenEndpoint` Endpoint for oauth token
+- `authConfig` key url
+
+
+After that start the development server for the backend with `npm start`.
+
+
+> For local development [Nkrog](https://ngrok.com/) is recomended because canvas does not allow to load lti plugins over http or from the localhost.
+
+
+If everything is set up correctly the Lti plugin should be shown up inside Canvas.
 
 ---
 

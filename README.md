@@ -14,7 +14,7 @@ This is important to mention, since there are differences in configuration files
 - [3. Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app)
 - [4. Install LTI app inside Canvas](#4-install-lti-app-inside-canvas)
 - [5. Use LTI plugin inside Canvas](#5-use-lti-plugin-inside-canvas)
-- [6. How to use example plugin](#aufbau)
+- [6. How to use and set up the example LTI app](#6-how-to-use-and-set-up-the-example-lti-app)
 
 ---
 
@@ -145,6 +145,36 @@ After the installation has worked, the plugin can be used within Canvas. Dependi
 ---
 
 ## 5. Use LTI plugin inside Canvas
+
+The previously installed external LTI plugin can now be inserted and used by lecturers in several courses.
+
+To integrate the plugin, a new course must be created.
+A *module* must be created within this course.
+*External tool* must be selected in the module and the previously registered LTI 1.3 plugin can be integrated there and should be available for selection here.
+If everything is configured correctly, the LTI plugin should then be displayed at this point in the course and the students can use it to learn.
+
+It is important to note here that if an LTI plugin is inserted via *module -> External Tool*, it cannot be used to send notes to Canvas. An extra step must be taken for this.
+Plugins that are inserted above are therefore not authorized to send grades, instead these LTI plugins can only visually reproduce the content or carry out ungraded quizzes.
+
+So that LTI plugins can also send school grades, an assignment must first be created using the LTI plugin.
+After this assignment has been created, this assignment can be added within a new module.
+Once this is done, the LTI plugin can also send sheet music to cavas.
+It is therefore important to ensure that the LTI plugin is integrated in the right place in Canvas
+
+
+| :exclamation:  Important   |
+|-----------------------------------------|
+
+> It is important to know that the *Student view* as a course administrator is not sufficient to check the grading of the LTI plugin.
+For this purpose, an actual second student account must be created to carry out this graded course.
+That means a student account has to be created and the created course has to be assigned to this student so that he can access the graded LIT plugin.
+If you try to use the graded LTI plugin as a course administrator in the *Student view*, an error message appears.
+
+---
+
+## 6. How to use and set up the example LTI app
+
+
 
 ---
 

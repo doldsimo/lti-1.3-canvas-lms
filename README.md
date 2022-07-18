@@ -130,11 +130,11 @@ Local (nly for one course):
 
 In both options you get to the fact that you can add an app. See the screenshot below.
 
-![Add LTI app](./zdoc/img/add_lti_app.png 'Add LTI app')
+![Add LTI app](./zdoc/img/add_lti_app.PNG 'Add LTI app')
 
 Click on +App and a new window opens in which you can integrate the external app.
 
-![Add LTI app cientid](./zdoc/img/add_lti_app_clientid.png 'Add LTI app cientid')
+![Add LTI app cientid](./zdoc/img/add_lti_app_clientid.PNG 'Add LTI app cientid')
 
 Select that you add the new app via the Client ID.
 This ID is found by the creation from the LTI Developer key. In this example the ID is: “10000000000001” (Look at previous screenshot).

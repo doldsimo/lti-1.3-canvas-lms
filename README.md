@@ -130,7 +130,7 @@ Global (for all courses):
 
 - Admin -> SiteAdmin -> Settings -> Apps
 
-Local (nly for one course):
+Local (only for one course):
 
 - Example Course -> Settings -> Apps
 

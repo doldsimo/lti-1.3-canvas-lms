@@ -38,7 +38,7 @@ The example application in this repository builds on top of [ltijs](https://gith
 
 If you are experienced with LTI and just want to try out the LTI plugin quickly, you can skip to step 6 [How to use and set up the example LTI app](#6-how-to-use-and-set-up-the-example-lti-app).
 
-However, I recommend reading through all points thoroughly, as there are several difficulties with integrating LTI with canvas.
+However, I recommend reading through all points thoroughly, as there are several difficulties with integrating LTI with Canvas.
 
 
 ---
@@ -58,10 +58,10 @@ To test this plugin, a separate instance was hosted on an Ubuntu 20.04 server, w
 
 > This error only occurs with self-hosted instances, which are not managed by Instructure
 
-Because when you try to launch a LTI 1.3 plugin in canvas you get a 500 server error which says "undefined method `sign' for nil:NilClass"
+Because when you try to launch a LTI 1.3 plugin in Canvas you get a 500 server error which says "undefined method `sign' for nil:NilClass"
 
 Although Canvas was set up correctly, no LTI plugin can be integrated. This is because important configuration files for LTI are missing or misconfigured.
-Unfortunately, this step is not properly explained in the canvas documentation.
+Unfortunately, this step is not properly explained in the Canvas documentation.
 
 To fix this problem follow this steps:
 
@@ -74,7 +74,7 @@ To fix this problem follow this steps:
 7. After that restart your web server. For Apache use:
     `sudo /etc/init.d/apache2 restart`
 
-After these steps, the LTI plugin should be loaded and displayed in canvas
+After these steps, the LTI plugin should be loaded and displayed in Canvas.
 
 Another explenation could be found in [this post](https://community.canvaslms.com/t5/Canvas-Developers-Group/Canvas-LTI-1-3-Error-Unknown-Key-Type/m-p/390285/highlight/true#M6345) from the Canvas Community forum.
 
@@ -84,7 +84,7 @@ Another explenation could be found in [this post](https://community.canvaslms.co
 
 ## 3. Create developer key for external LTI app
 
-If a new LTI 1.3 plugin is integrated into Canvas, a new developer key must first be created. This is needed for the external app to interact with canvas.
+If a new LTI 1.3 plugin is integrated into Canvas, a new developer key must first be created. This is needed for the external app to interact with Canvas.
 
 So a new "LTI Developer Key" has to be created under the *admin panel* of Canvas. See the screenshots below.
 
@@ -107,7 +107,7 @@ Here is an example of a completed LTI developer key configuration:
 > Canvas only allows embedding LTI 1.3 plugins which are loaded over HTTPS. This can sometimes be difficult for development purposes, since you don't want to redeploy the plugin on a server with every change. That's why I recommend a tunnel like [Nkrog](https://ngrok.com/) for development purposes, which makes your own local host accessible from the outside via an https url.
 
 
-> It is important that if the LTI plugin is to have certain functions, such as sending notes to canvas, this feature must be activated in the configuration under "LTI Advantage Services". If these functions are not activated here, the external tool does not have these permissions and, for example, no notes can be sent to Canvas.
+> It is important that if the LTI plugin is to have certain functions, such as sending notes to Canvas, this feature must be activated in the configuration under "LTI Advantage Services". If these functions are not activated here, the external tool does not have these permissions and, for example, no notes can be sent to Canvas.
 
 
 
@@ -234,9 +234,9 @@ Register the used plattform correct inside the `index.js` file. (Canvas Exmaple)
     authConfig: { method: 'JWK_SET', key: 'https://canvas.exampledomain.com/api/lti/security/jwks' }
   })
 ```
-- `url` where is the canvas instance hosted
+- `url` where is the Canvas instance hosted
 - `name` domainname from hosted instance
-- `clientId` id from canvas for lti plugin (check step 3 [Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app))
+- `clientId` id from Canvas for lti plugin (check step 3 [Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app))
 - `authenticationEndpoint` Endpoint for lit
 - `accesstokenEndpoint` Endpoint for oauth token
 - `authConfig` key url
@@ -245,11 +245,11 @@ Register the used plattform correct inside the `index.js` file. (Canvas Exmaple)
 After that start the development server for the backend with `npm start`.
 
 
-> For local development [Nkrog](https://ngrok.com/) is recomended because canvas does not allow to load lti plugins over http or from the localhost.
+> For local development [Nkrog](https://ngrok.com/) is recomended because Canvas does not allow to load lti plugins over http or from the localhost.
 
 
 If everything is set up correctly the Lti plugin should be shown up inside Canvas.
 
 ---
 
-Special thanks to [@Cvmcosta](https://github.com/Cvmcosta) (Inventor of ltijs) which helped me a lot with integreating ltijs with grades to canvas.
+Special thanks to [@Cvmcosta](https://github.com/Cvmcosta) (Inventor of ltijs) which helped me a lot with integreating ltijs with grades to Canvas.

@@ -1,4 +1,4 @@
-# LTI 1.3 plugin Canvas integration example
+# LTI 1.3 plugin Canvas integration example (Node.js, React.js)
 
 | :exclamation:  Information   |
 |-----------------------------------------|

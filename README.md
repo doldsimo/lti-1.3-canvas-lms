@@ -1,6 +1,5 @@
 # LTI 1.3 plugin Canvas integration example (Node.js, React.js)
 
-| :exclamation:  Information   |
 |-----------------------------------------|
 > Repository describes and provides an example plugin on how a Learning Management System (LMS) can be extended with your own plugins using LTI 1.3 Advanced. In this example Canvas LMS is used.
 

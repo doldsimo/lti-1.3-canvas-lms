@@ -17,6 +17,7 @@ This is important to mention, since there are differences in configuration files
 - [4. Install LTI app inside Canvas](#4-install-lti-app-inside-canvas)
 - [5. Use LTI plugin inside Canvas](#5-use-lti-plugin-inside-canvas)
 - [6. How to use and set up the example LTI app](#6-how-to-use-and-set-up-the-example-lti-app)
+- [Need help using this example?]()
 
 ---
 
@@ -251,6 +252,12 @@ After that start the development server for the backend with `npm start`.
 
 
 If everything is set up correctly the Lti plugin should be shown up inside Canvas.
+
+---
+
+## Need help using this example?
+
+If you have problems using this example repository [write an issue](https://github.com/doldsimo/lti-1.3-canvas-lms/issues/new).
 
 ---
 

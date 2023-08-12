@@ -17,7 +17,7 @@ This is important to mention, since there are differences in configuration files
 - [4. Install LTI app inside Canvas](#4-install-lti-app-inside-canvas)
 - [5. Use LTI plugin inside Canvas](#5-use-lti-plugin-inside-canvas)
 - [6. How to use and set up the example LTI app](#6-how-to-use-and-set-up-the-example-lti-app)
-- [Need help using this example?]()
+- [Need help using this example?](#need-help-using-this-example)
 
 ---
 

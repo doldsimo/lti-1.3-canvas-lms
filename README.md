@@ -4,7 +4,7 @@
 
 > Repository describes and provides an example plugin on how a Learning Management System (LMS) can be extended with your own plugins using LTI 1.3 Advanced. In this example Canvas LMS is used.
 
-There are several ways to extend a LMS with your own plugins and functions. A popular option is to extend an LMS using LTI plugins. LIT is a standard used by many LMS (such as Moodle, Canvas, ...). With LTI, a learning module can be expanded to include its own functionalities. The LTI extension is a completely independent web application that interacts and communicates with the LMS.
+There are several ways to extend a LMS with your own plugins and functions. A popular option is to extend an LMS using LTI plugins. LTI is a standard used by many LMS (such as Moodle, Canvas, ...). With LTI, a learning module can be expanded to include its own functionalities. The LTI extension is a completely independent web application that interacts and communicates with the LMS.
 In this example, LTI Advanced (LTI 1.3) was used to integrate an example plugin into the Canvas learning platform.
 The Canvas Instance is a separate hosted instance and is therefore not hosted by Instructure.
 This is important to mention, since there are differences in configuration files for the operation of LTI 1.3 that have to be adjusted for a self-hosted instance.
@@ -176,7 +176,7 @@ It is therefore important to ensure that the LTI plugin is integrated in the rig
 
 > It is important to know that the *Student view* as a course administrator is not sufficient to check the grading of the LTI plugin.
 For this purpose, an actual second student account must be created to carry out this graded course.
-That means a student account has to be created and the created course has to be assigned to this student so that he can access the graded LIT plugin.
+That means a student account has to be created and the created course has to be assigned to this student so that he can access the graded LTI plugin.
 If you try to use the graded LTI plugin as a course administrator in the *Student view*, an error message appears.
 
 ---
@@ -240,7 +240,7 @@ Register the used plattform correct inside the `index.js` file. (Canvas Exmaple)
 - `url` where is the Canvas instance hosted
 - `name` domainname from hosted instance
 - `clientId` id from Canvas for lti plugin (check step 3 [Create developer key for external LTI app](#3-create-developer-key-for-external-lti-app))
-- `authenticationEndpoint` Endpoint for lit
+- `authenticationEndpoint` Endpoint for lti
 - `accesstokenEndpoint` Endpoint for oauth token
 - `authConfig` key url
 
